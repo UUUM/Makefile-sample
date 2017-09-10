@@ -6,3 +6,6 @@ foo.o: foo.c
 
 main.o: main.c
 	gcc -c -o main.o main.c
+
+clean:
+	rm -f foo *.o
