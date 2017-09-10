@@ -1,0 +1,18 @@
+CC = cc
+CFLAGS = -O0
+objects = foo.o main.o
+targets = foo
+
+all: $(targets)
+
+foo: $(objects)
+	$(CC) -o foo $(objects)
+
+foo.o: foo.c
+	$(CC) -c $(CFLAGS) -o foo.o foo.c
+
+main.o: main.c foo.h
+	$(CC) -c $(CFLAGS) -o main.o main.c
+
+clean:
+	rm -f $(targets) $(objects)
