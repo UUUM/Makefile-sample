@@ -7,8 +7,7 @@ output = foo
 $(output): $(objects)
 	$(CC) -o $@ $?
 
-.SUFFIXES: .c .o
-.c.o:
+%.o: %.c $(headers)
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:

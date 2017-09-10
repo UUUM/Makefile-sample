@@ -1,7 +1,7 @@
 foo: foo.o main.o
 	cc -o foo foo.o main.o
 
-foo.o: foo.c
+foo.o: foo.c foo.h
 	cc -c -O0 -o foo.o foo.c
 
 main.o: main.c foo.h
