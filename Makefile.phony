@@ -1,0 +1,15 @@
+CC = cc
+CFLAGS = -O0
+objects = foo.o main.o
+headers = foo.h
+output = foo
+
+$(output): $(objects)
+	$(CC) -o $@ $?
+
+%.o: %.c $(headers)
+	$(CC) -c $(CFLAGS) -o $@ $<
+
+.PHONY clean
+clean:
+	rm -f $(output) $(objects)
