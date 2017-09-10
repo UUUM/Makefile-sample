@@ -10,6 +10,6 @@ $(output): $(objects)
 %.o: %.c $(headers)
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-.PHONY clean
+.PHONY: clean
 clean:
 	rm -f $(output) $(objects)
