@@ -6,10 +6,8 @@ output = foo
 $(output): $(objects)
 	$(CC) -o $@ $?
 
-foo.o: foo.c
-	$(CC) -c $(CFLAGS) -o $@ $<
-
-main.o: main.c foo.h
+.SUFFIXES: .c .o
+.c.o:
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:

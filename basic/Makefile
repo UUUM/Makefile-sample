@@ -1,5 +1,3 @@
-all: foo
-
 foo: foo.o main.o
 	cc -o foo foo.o main.o
 
