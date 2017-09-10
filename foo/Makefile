@@ -4,7 +4,7 @@ foo: foo.o main.o
 foo.o: foo.c
 	gcc -c -o foo.o foo.c
 
-main.o: main.c
+main.o: main.c foo.h
 	gcc -c -o main.o main.c
 
 clean:
