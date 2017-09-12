@@ -1,6 +1,2 @@
 #include "foo.h"
-
-int
-main() {
-    foo();
-}
+int main() { foo(); }
